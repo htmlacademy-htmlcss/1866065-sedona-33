@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
 <header class="page-header">
@@ -11,13 +12,13 @@
   <nav class="navigation">
     <ul class="navigation-list">
       <li class="navigation-item">
-        <a href="#">Главная</a>
+        <a class="navigation-link" href="#">Главная</a>
       </li>
       <li class="navigation-item">
-        <a href="#">О седоне</a>
+        <a class="navigation-link" href="#">О седоне</a>
       </li>
       <li class="navigation-item">
-        <a href="catalog.html">Гостиницы</a>
+        <a class="navigation-link" href="catalog.html">Гостиницы</a>
       </li>
     </ul>
     <ul class="navigation-list navigation-user">
@@ -33,87 +34,88 @@
     </ul>
   </nav>
 </header>
-<main class="index-main">
-  <section class="first-screen"> <span class="visually-hidden">
-    <h1>Добро пожаловать в Седону</h1>
-    </span>
+<main class="main-index">
+  <section class="first-screen"> 
+    <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
     <div class="vector-images">
     </div>
     <h2 class="first-screen-title">Седона — небольшой городок в Аризоне,
       заслуживающий большего!
     </h2>
-    <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
+    <p class="first-screen-paragraf">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
   </section>
   <section class="about-sedona">
-    <span class="visually-hidden"><h2>Преимущества</h2></span>
-    <div class="benefits-city">
-    <h3 class="benefits-city-title">Настоящий
-      городок</h3>
-      <p>— №1 —</p>
-      <p>Седона — не аттракцион для туристов, там течёт 
-        своя жизнь</p>
-    </div>
-    <img src="images/sedona-town.jpg" alt="Фото-городка-Седона" width="800" height="384">
+    <h2 class="visually-hidden">Преимущества</h2>
     <ul class="benefits-city-list">
       <li class="benefits-city-item">
-        <h4>ЖИЛЬЁ</h4>
-        <p>Рекомендуем пожить 
+    <h3 class="benefits-city-title white">Настоящий
+      городок</h3>
+      <p class="benefits-city-link-namber white">— №1 —</p>
+      <p class="benefits-city-link white">Седона — не аттракцион для туристов, там течёт 
+        своя жизнь</p>
+        </li>
+    <img src="images/sedona-town.jpg" alt="Фото-городка-Седона" width="800" height="384">
+      <li class="benefits-city-item">
+        <h4 class="benefits-city-title">ЖИЛЬЁ</h4>
+        <p class="benefits-city-link">Рекомендуем пожить 
           в настоящем мотеле, 
           всё как в кино!</p>
-      </li>      <li class="benefits-city-item">
-        <h4>ЕДА</h4>
-        <p>Всегда заказывайте
+      </li>      
+      <li class="benefits-city-item">
+        <h4 class="benefits-city-title">ЕДА</h4>
+        <p class="benefits-city-link">Всегда заказывайте
           топовый фирменный бургер,
            вы не разочаруетесь!</p>
-      </li>      <li class="benefits-city-item">
-        <h4>СУВЕНИРЫ</h4>
-        <p>Не только китайского, 
+      </li>     
+       <li class="benefits-city-item">
+        <h4 class="benefits-city-title">СУВЕНИРЫ</h4>
+        <p class="benefits-city-link">Не только китайского, 
           но и настоящего местного производства!</p>
       </li>
     </ul>
     <img src="images/grand-canyon.jpg" alt="Фотография-Гранд-Каньёна" width="800" height="384">
     <div class="benefits-outskirts">
-      <h3 class="benefits-out-title">Там есть
+      <h3 class="benefits-city-title white">Там есть
         мост дьявола</h3>
-        <p>— №2 —</p>
-        <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+        <p class="benefits-city-link-namber white">— №2 —</p>
+        <p class="benefits-city-link white">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
       </div>
       <ul class="benefits--list">
         <li class="benefits-out-item">
-          <h4>Небольшая
+          <h4 class="benefits-city-title">Небольшая
             площадь</h4>
-            <p>— №3 —</p>
-          <p>Все достопримечательности 
+            <p class="benefits-city-link-namber">— №3 —</p>
+          <p class="benefits-city-link">Все достопримечательности 
             находятся очень близко</p>
         </li>      
         <li class="benefits-out-item">
-          <h4>Красивая
+          <h4 class="benefits-city-title">Красивая
             дорога</h4>
-            <p>— №4 —</p>
-          <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            <p class="benefits-city-link-namber">— №4 —</p>
+          <p class="benefits-city-link">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
         </li>     
          <li class="benefits-out-item">
-          <h4>Мало
+          <h4 class="benefits-city-title">Мало
             туристов</h4>
-            <p>— №5 —</p>
-          <p>Большинство едет в Гранд Каньон и толпится там</p>
+            <p class="benefits-city-link-namber">— №5 —</p>
+          <p class="benefits-city-link">Большинство едет в Гранд Каньон и толпится там</p>
         </li>
       </ul>
   </section>
   <section class="hotel-search"> 
-  <h2>Поиск Отелей</h2>
-  <h3 class="hotel-search-title">Заинтересовались?</h3>
-  <p>Укажите предполагаемые даты поездки,
+  <h2 class="visually-hidden">Поиск Отелей</h2>
+  <h3 class="first-screen-title">Заинтересовались?</h3>
+  <p class="first-screen-paragraf">Укажите предполагаемые даты поездки,
     и мы покажем вам лучшие предложения гостиниц в Седоне
     </p>
     <a class="hotel-search-button" href="catalog.html">ПОИСК ГОСТИНИЦЫ В седоне</a>
   </section>
   <section class="subscription"> 
-    <h3 class="subscription-title">Подпишитесь на рассылку</h3>
-    <p>Только полезная информация и никакого спама,
+    <h3 class="first-screen-title white">Подпишитесь на рассылку</h3>
+    <p class="sabscription-paragraf">Только полезная информация и никакого спама,
       честное бойскаутское!
       </p>
-      <button type="button" class="subscription-button">ПОИСК ГОСТИНИЦЫ В седоне</button>
+      <button type="button" class="subscription-button">Подписаться</button>
     </section>
 </main>
 <footer class="page-footer">
@@ -122,7 +124,7 @@
  <a href="https://www.facebook.com/htmlacademy"><span class="visually-hidden">Фейсбук</span></a>  
  <a href="https://www.youtube.com/c/HTMLAcademyRUS"><span class="visually-hidden">Ютюб</span></a>
  </div>
- <a href="tel:+78128121212">+7 (812) 812-12-12</a>
+ <a class="contact-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
  <a href="https://htmlacademy.ru/"><span class="visually-hidden">Логотип Академии</span></a>
 </footer>
   </body>
