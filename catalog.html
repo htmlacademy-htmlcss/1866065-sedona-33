@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
 <header class="page-header">
@@ -11,13 +12,13 @@
   <nav class="navigation">
     <ul class="navigation-list">
       <li class="navigation-item">
-        <a href="#">Главная</a>
+        <a class="navigation-link" href="#">Главная</a>
       </li>
       <li class="navigation-item">
-        <a href="#">О седоне</a>
+        <a class="navigation-link" href="#">О седоне</a>
       </li>
       <li class="navigation-item">
-        <a href="catalog.html">Гостиницы</a>
+        <a class="navigation-link" href="catalog.html">Гостиницы</a>
       </li>
     </ul>
     <ul class="navigation-list navigation-user">
@@ -34,8 +35,8 @@
   </nav>
 </header>
 <main class="main-inner">
-    <h1 class="inner-title">Гостиницы Седоны</h1>
  <section class="catalog-hotels">
+   <h1 class="inner-title">Гостиницы Седоны</h1>
 <h2 class="visually-hidden">Выбор параметров гостиниц с фильтрами</h2>
 <ul class="breadcrumbs">
     <li class="breadcrumbs-item">
@@ -81,9 +82,9 @@
  </section>
 <section class="choice-hotel">
   <h2 class="visually-hidden">Выбор отелей</h2>
-     <p>Найдено гостиниц: 38</p>
+     <p class="search-result">Найдено гостиниц: 38</p>
   <select class="select-control" aria-label="Сортировка">
-      <option value="cheap">Сначала дешевое</option>
+      <option class=".catalog-filter-title" value="cheap">Сначала дешевое</option>
   </select>
   <div class="icons">
  <a href="#" logo="mod-vector"> </a>
@@ -97,8 +98,8 @@
       <img class="hotel-card-image" src="images/hotel-1.jpg" alt="Амара ресорт" width="300" height="206">
       <p class="hotel-card-paragraph">Гостинница</p>
       <p class="hotel-card-paragraph">от 4000 ₽</p>
-      <a class="hotel-card-buttom" href="#">Подробнее</a>
-      <a class="hotel-card-buttom  blue-buttom" href="#">Избранное</a>
+      <a class="button card-button" href="#">Подробнее</a>
+      <button  class="button  blue-button" type="submit" href="#">В Избранное</button>
       <div class="hotel-card-rating">
         <p class="stars"></p>
         <p class="rating">Рейтинг: 8,5</p>
@@ -109,8 +110,8 @@
       <img class="hotel-card-image" src="images/hotel-2.jpg" alt="Десерт Квэйл Инн" width="300" height="206">
       <p class="hotel-card-paragraph">Гостинница</p>
       <p class="hotel-card-paragraph">от 3000 ₽</p>
-      <a class="hotel-card-buttom" href="#">Подробнее</a>
-      <a class="hotel-card-buttom  blue-buttom" href="#">Избранное</a>
+      <a class="button card-button" href="#">Подробнее</a>
+      <button  class="button  blue-button" type="submit" href="#">В Избранное</button>
       <div class="hotel-card-rating">
         <p class="stars"></p>
         <p class="rating">Рейтинг: 8,9</p>
@@ -121,8 +122,8 @@
       <img class="hotel-card-image" src="images/hotel-3.jpg" alt="Вилас ат Поко Диабло" width="300" height="206">
       <p class="hotel-card-paragraph">Гостинница</p>
       <p class="hotel-card-paragraph">от 2000 ₽</p>
-      <a class="hotel-card-buttom" href="#">Подробнее</a>
-      <a class="hotel-card-buttom  blue-buttom" href="#">В избранном</a>
+      <a class="button card-button" href="#">Подробнее</a>
+      <button  class="button  green-button" type="submit" href="#">В Избранном</button>
       <div class="hotel-card-rating">
         <p class="stars"></p>
         <p class="rating">Рейтинг: 9,2</p>
@@ -133,8 +134,8 @@
       <img class="hotel-card-image" src="images/hotel-4.jpg" alt="Амара ресорт" width="300" height="206">
       <p class="hotel-card-paragraph">Гостинница</p>
       <p class="hotel-card-paragraph">от 3000 ₽</p>
-      <a class="hotel-card-buttom" href="#">Подробнее</a>
-      <a class="hotel-card-buttom  blue-buttom" href="#">Избранное</a>
+      <a class="button card-button" href="#">Подробнее</a>
+      <button  class="button  blue-button" type="submit" href="#">В Избранное</button>
       <div class="hotel-card-rating">
         <p class="stars"></p>
         <p class="rating">Рейтинг: 9,2</p>
@@ -168,26 +169,26 @@
   </a>
 </li>
 </ul>
- <p>Гостиниц на странице:</p>
+ <p class="hotel-card-paragraph">Гостиниц на странице:</p>
 <select class="select-control number-per-page" aria-label="Количество-найденных-отелей">
-  <option value="four">4</option>
+  <option Class="hotel-card-paragraph" value="four">4</option>
 </select>
   </section>
   <section class="subscription"> 
     <h3 class="subscription-title">Подпишитесь на рассылку</h3>
-    <p>Только полезная информация и никакого спама,
+    <p >Только полезная информация и никакого спама,
       честное бойскаутское!
       </p>
       <button type="button" class="subscription-button">ПОИСК ГОСТИНИЦЫ В седоне</button>
     </section>
 </main>
 <footer class="page-footer">
-    <div class="social networks">
-   <a href="https://twitter.com/htmlacademy_ru"><span class="visually-hidden">Твитер</span></a> 
-   <a href="https://www.facebook.com/htmlacademy"><span class="visually-hidden">Фейсбук</span></a>  
-   <a href="https://www.youtube.com/c/HTMLAcademyRUS"><span class="visually-hidden">Ютюб</span></a>
-   </div>
-   <a href="tel:+78128121212">+7 (812) 812-12-12</a>
-   <a href="https://htmlacademy.ru/"><span class="visually-hidden">Логотип Академии</span></a>
-  </footer>
+  <div class="social networks">
+ <a href="https://twitter.com/htmlacademy_ru"><span class="visually-hidden">Твитер</span></a> 
+ <a href="https://www.facebook.com/htmlacademy"><span class="visually-hidden">Фейсбук</span></a>  
+ <a href="https://www.youtube.com/c/HTMLAcademyRUS"><span class="visually-hidden">Ютюб</span></a>
+ </div>
+ <a class="contact-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+ <a href="https://htmlacademy.ru/"><span class="visually-hidden">Логотип Академии</span></a>
+</footer>
   </body>
