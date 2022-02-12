@@ -1,127 +1,427 @@
 @font-face {
     font-family: "PT Sans";
-    src: url("ptsans-400.woff2") format("woff2");
+    src: url("../fonts/ptsans-400.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
 }
+
 @font-face {
     font-family: "PT Sans";
-    src: url("ptsans-700.woff2") format("woff2");
+    src: url("../fonts/ptsans-700.woff2") format("woff2");
     font-style: normal;
     font-weight: 700;
     font-display: swap;
 }
-body {
-    font-family: "PT Sans" sans-serif;
-    font-size: 18px;
-    line-height: 21px;
-    background-color: #F2F2F2;
-    color: black;
+
+html {
+    height: 100%;
 }
 
+body {
+    margin: 0;
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-size: 18px;
+    line-height: 21px;
+    background-color: #ffffff;
+    color:#333333;
+    height: 100vh;
+}
+
+.page {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden
+}
 /* Pages*/
 .page-header {
-   background-color: #ffffff;
-   color:black;
+    display: flex;
+    flex-direction: row;
+    background-color: #ffffff;
+    color:black;
+    width: 1060px;
+    margin: 0 auto;
+    position: relative;
 }
+
+.logo-link {
+    position: absolute;
+}
+
+.navigation {
+    padding-left: 186px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.navigation-list {
+    padding: 20px 0 0 0;
+    margin: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    /* width: 435px; */
+    gap: 35px;
+}
+
+.navigation-user {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display:grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 10px;
+    padding-top: 15px;
+}
+
+.navigation-button{ 
+    background: #756257;
+    border-radius: 4px;
+    color:#ffffff;
+    text-decoration: none;
+    display: block;
+    padding: 7px 10px;
+    min-width: 160px;
+    box-sizing: border-box;
+}
+
 .navigation-link {
     font-weight: 700;
     font-size: 20px;
     line-height: 26px;
     text-decoration: none;
-    text-transform: uppercase;
     color: black;
-    text-align: center;
+    display:block;
 }
+
+.navigation-link--active {
+    padding-bottom: 20px;
+    border-bottom: 2px solid red;
+}
+
 .main-index {
-    background-image: url("/images/background-index.jpg");
-    background-size: 100% auto;
-    background-repeat: no-repeat;
     background-color: blanchedalmond;
     color: black;
+    width: 1200px;
+    margin: 0 auto;
 }
-.first-screen-title {
+
+.main-container {
+    flex-grow: 1;
+
+}
+.welcome {
+    background-image: url("../images/background-index.jpg");
+    background-repeat: no-repeat;
+	margin: 0;
+	padding-top: 48px;
+	width: 1200px;
+}
+
+.welcome-image-container {     
+    width: 533px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about {
+	margin: 0;
+	padding-top: 143px;;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.about-title {
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
     text-transform: uppercase;
-    text-align: center;
+	width: 720px;
+	text-align: center;
+    margin: 0 auto;
 }
-.first-screen-paragraf {
+
+.about-text {
     font-size: 22px;
     line-height: 36px;
     color: #333333;
+    padding-top: 30px;
+    margin: 0 auto;
     text-align: center;
+	padding-bottom: 81px;
 }
-.benefits-city-title {
+
+.about-list {
+    margin: 0;
+	padding: 0;
+    list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.about-item {
+    width: 33.3%;
+}
+
+.about-item--special {
+	width: 100%;
+}
+
+.about-item-container {
+	display: flex;
+	min-height: 384px;
+	background-color: #83B3D3;
+}
+
+.about-item-container::after {
+	content: "";
+	width: 800px;
+	background: url("../images/sedona-town.jpg") no-repeat left top;
+	background-size: cover;
+	display: block;
+}
+
+.about-item-wrapper {
+	width: 400px;
+	color: #FFFFFF
+
+}
+
+.about-item-title {
     font-weight: 700;
     font-size: 24px;
     line-height: 28px;
-    text-align: center;
     text-transform: uppercase;
+    margin: 0 auto;
+    width: 200px;
+    text-align: center;
+	padding-top: 97px;
 }
-.benefits-city-link-namber {
+
+.about-number {
+    font-size: 18px;
+    line-height: 21px; 
+    margin: 0 auto;
+    text-align: center;
+	padding-top: 30px;
+}
+
+.about-description {
     font-size: 18px;
     line-height: 21px;
+    margin: 0 auto;
+	width: 207px;
     text-align: center;
-    text-transform: uppercase;
+    padding-top: 28px;
+    text-align: center;
 }
-.benefits-city-link {
+
+.benefits-list {
+	margin: 0 auto;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	width: 1200px;
+}
+
+.benefits-item {
+	background-color: rgba(131, 179, 211, 0.12);
+	min-height: 384px;
+	width: 400px;
+    display: inline-grid;
+    grid-template-rows: 42% 15% 40%;
+}
+
+.benefits-item-container {
+    display: block;
+    width: 100%;
+}
+
+.benefits-icon-home::before {
+    content: "";
+	background: url("../images/svg/home-icon.svg") no-repeat bottom;
+    display: flex;
+    min-height: 72px;
+}  
+
+.benefits-icon-burger::before {
+    content: "";
+	background: url("../images/svg/burger-icon.svg") no-repeat bottom;
+    display: flex;
+    min-height: 72px;
+}
+
+.benefits-icon-box::before {
+    content: "";
+	background: url("../images/svg/box-icon.svg") no-repeat bottom;
+    display: flex;
+    min-height: 72px;
+}
+
+.benefits-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: uppercase;
+    margin: 0 auto;
+    padding-top: 22px;
+}
+
+.benefits-text {
     font-size: 18px;
     line-height: 21px;
-    text-align: center;   
+    color: #333333;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 11px
 }
-.white {
-    color: #ffffff;
+
+.causes-div {
+	display: grid;
+	grid-template-columns: 33% 33% 33%;
+	width: 1200px;
+
 }
-/*subscription*/
-.subscription {
-    background-image: url("/images/background\ \(1\).jpg");
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    background-color: blanchedalmond;
-    color: black;
-}
-.hotel-search {
+/* Поиск*/
+.search {
     background-color: #ffffff;
+
 }
-.hotel-search-button {
-   font-weight: 700;
-   font-size: 20px;
-   line-height: 36px;
-   text-align: center;
-   text-transform: uppercase;
-   background: #756257;
-   color: #ffffff;
-   text-decoration: none;
+
+.search-title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    text-transform: uppercase;
+    color: #000000;
 }
-.sabscription-paragraf {
-    font-weight: 400;
+
+.search-text {
     font-size: 22px;
     line-height: 26px;
-    text-align: center;
+}
+
+.search-button {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 36px;
+    text-transform: uppercase;
+    background: #756257;
     color: #ffffff;
+    text-decoration: none;
+}   
+/*subscription*/
+
+.page-footer {
+    width: 1200px;
+    height: 531px;
+    margin: 0 auto;
+
+}
+.subscription {
+    background-image: url("../images/background-bloor.jpg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: #000000;
+    color: #ffffff;
+    height: 441px;
+}
+
+.subscription-title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    text-transform: uppercase;
+    padding-left: 398px;
+    width: 720px;
+    margin: 0%;
+    padding-top: 30px;
+
+}
+
+.sabscription-text {
+    font-size: 22px;
+    line-height: 26px;
+    width: 500px;
+    text-align: center;
+    padding-left: 350px;
+    margin: 0;
+    padding-top: 28px;
+}
+
+.subscription-form {
+    width: 815px;
+    margin: 0;
+    padding-left: 197px;
+    padding-top: 44px;
 }
 .subscription-button {
     font-weight: 700;
     font-size: 20px;
     line-height: 26px;
-    text-align: center;
     text-transform: uppercase;
-    color: #ffffff;
     background: #83B3D3;
     background-position: center;
+    color: #FFFFFF;
+    width: 200px;
+    height: 60px;
+    border-radius: 13px;
 }
+
+.subscription-email {
+    font-size: 18px;
+    line-height: 26px;
+    background-color: #ffffff;
+    color: #000000;
+    width: 600px;
+    height: 60px;
+    border-radius: 13px;
+    padding-left: 23px;
+    box-sizing: border-box;
+}
+
+.footer-contakts {
+    display: flex;
+    flex-direction: row;
+    height: 120px;
+}
+
+.social-networks {
+    width: 180px;
+    margin-left: 72px;
+}
+
 .contact-phone {
-    font-style: normal;
-    font-weight: normal;
     font-size: 40px;
     line-height: 40px;
     text-transform: uppercase;
     color: #000000;
+    text-decoration: none;
+    width: 720px;
+    margin: 0 auto;
 }
 
+.academy-logo {
+    margin-right: 72px;
+    width: 115px;
+}
 /* Page-inner*/
 .button {
     font-weight: bold;
@@ -130,9 +430,11 @@ body {
     text-align: center;
     text-transform: uppercase;
 }
+
 .blue-button {
     background-color:#83B3D3;
 }
+
 .green-button {
     background-color: #7DB54F;
 }
@@ -153,19 +455,22 @@ body {
     line-height: 78px;
     color: #FFFFFF;
 }
+
 .catalog-hotels {
-    background-image: url("/images/catalog-background\ 1.jpg");
+    background-image: url("../images/catalog-background.jpg");
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-color: black;
     color: #FFFFFF;
 }
-.catalog-filter-title {
+
+.filter-legend {
     font-weight: 700;
     font-size: 18px;
     line-height: 23px;
 }
-.control-input {
+
+.filter-lable {
     font-weight: 400;
     font-size: 18px;
     line-height: 23px;
@@ -175,24 +480,28 @@ body {
     background-color: #FFFFFF;
     color:black;
 }
+
 .search-result {
     font-weight: bold;
     font-size: 30px;
     line-height: 39px;
     text-transform: uppercase;
 }
+
 .hotel-card-title {
     font-weight: bold;
     font-size: 24px;
     line-height: 31px;
     color:black;
 }
+
 .hotel-card-paragraph {
     font-weight: normal;
     font-size: 18px;
     line-height: 23px;
     color: #333333;
 }
+
 .rating {
     font-weight: 400;
     font-size: 16px;
@@ -217,6 +526,7 @@ body {
     background-color: #83B3D3;
     color: #FFFFFF; 
 }
+
 .pagination-disabled {
     background-color: #F2F2F2;
     color: black;
