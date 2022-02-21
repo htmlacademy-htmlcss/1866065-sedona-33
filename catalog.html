@@ -49,26 +49,41 @@
           <a class="breadcrumbs-link">Гостиницы</a>
         </li>
       </ul>
-
-
       <form action="https://echo.htmlacademy.ru/" class="filter" method="get">
         <div class="filter-container">
           <fieldset class="filter-group">
             <legend class="filter-legend">Инфраструктура:</legend>
-            <label class="filter-label">
-              <input type="checkbox" class="filter-input" name="swimming-pool">Бассейн</lable>
-              <label class="filter-label">
-                <input type="checkbox" class="filter-input" name="parking">Парковка
-              </label>
-              <label class="filter-label">
-                <input type="checkbox" class="filter-input" name="Wi-Fi">Wi-Fi
-              </label>
+            <ul class="filter-list filter-list--around">
+              <li class="filter-item checkbox">
+                <input id="swimming-pool" type="checkbox" class="checkbox-input visually-hidden" name="swimming-pool">
+                <label for="swimming-pool" class="checkbox-label">Бассейн</label>
+              </li>
+              <li class="filter-item checkbox">
+                <input id="parking" type="checkbox" class="checkbox-input visually-hidden" name="parking">
+                <label for="parking" class="checkbox-label">Парковка</label>
+              </li>
+              <li class="filter-item">
+                <input id="wi-fi" type="checkbox" class="checkbox-input visually-hidden" name="wi-fi">
+                <label for="wi-fi" class="checkbox-label">wi-fi</label> 
+              </li>
+            </ul>
           </fieldset>
           <fieldset class="filter-group">
             <legend class="filter-legend">Тип жилья:</legend>
-            <label class="filter-label"><input type="radio" class="filter-input" name="Hotel">Гостиница</lable>
-            <label class="filter-label"><input type="radio" class="filter-input" name="Motel">Мотель</lable>
-            <lable class="filter-label"><input type="radio" class="filter-input" name="Apartment">Апартаменты</lable>
+            <ul class="filter-list filter-list--type">
+              <li class="filter-item radio">
+                <input id="hotel" class="radio-input visually-hidden" name="hotel"></input>
+                <label for="hotel" class="radio-label">Гостиница</label>
+              </li>
+              <li class="filter-item radio">
+                <input id="motel" class="radio-input visually-hidden" name="motel"></input>
+                <label for="motel" class="radio-label">Мотель</label>
+              </li>
+              <li class="filter-item radio">
+                <input id="apartments" class="radio-input visually-hidden" name="apartments"></input>
+                <label for="apartments" class="radio-label">Апартаменты</label>
+              </li>
+            </ul>
           </fieldset>
           <fieldset class="filter-group">
             <legend class="filter-legend">Стоимость, ₽:</legend>
