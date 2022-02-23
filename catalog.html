@@ -18,7 +18,7 @@
           <a class="navigation-link" href="index.html">Главная</a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link" href="#">О седоне</a>
+          <a class="navigation-link" href="#">О Cедоне</a>
         </li>
         <li class="navigation-item">
           <a class="navigation-link">Гостиницы</a>
@@ -26,10 +26,10 @@
       </ul>
       <ul class="navigation-list navigation-user">
         <li class="navigation-item">
-          <a href="#"><span class="visually-hidden">Поиск</span></a>
+          <a class="navigation-link--searh" href="#"><span class="visually-hidden">Поиск</span></a>
         </li>
         <li class="navigation-item">
-          <a href="#"><span class="visually-hidden">Изображение</span></a>
+          <a class="navigation-link--favorites" href="#"><span class="visually-hidden">Изображение</span></a>
         </li>
         <li class="navigation-item">
           <a class="button navigation-button" href="#">Хочу Сюда</a>
@@ -42,7 +42,7 @@
       <h1 class="inner-title">Гостиницы Седоны</h1>
       <h2 class="visually-hidden">Выбор параметров гостиниц с фильтрами</h2>
       <ul class="breadcrumbs-list">
-        <li class="breadcrumbs-item ">
+        <li class="breadcrumbs-item breadcrumbs-link--special">
           <a class="breadcrumbs-link breadcrumbs-link--home" href="index.html"></a>
         </li>
         <li class="breadcrumbs-item">
@@ -72,23 +72,43 @@
             <legend class="filter-legend">Тип жилья:</legend>
             <ul class="filter-list filter-list--type">
               <li class="filter-item radio">
-                <input id="hotel" class="radio-input visually-hidden" name="hotel"></input>
+                <input id="hotel" class="radio-input visually-hidden" name="type-apartment" type="radio" value="hotel"></input>
                 <label for="hotel" class="radio-label">Гостиница</label>
               </li>
               <li class="filter-item radio">
-                <input id="motel" class="radio-input visually-hidden" name="motel"></input>
+                <input id="motel" class="radio-input visually-hidden" name="type-apartment" type="radio" value="motel"></input>
                 <label for="motel" class="radio-label">Мотель</label>
               </li>
               <li class="filter-item radio">
-                <input id="apartments" class="radio-input visually-hidden" name="apartments"></input>
+                <input id="apartments" class="radio-input visually-hidden" name="type-apartment" type="radio" value="apartments"></input>
                 <label for="apartments" class="radio-label">Апартаменты</label>
               </li>
             </ul>
           </fieldset>
-          <fieldset class="filter-group">
+          <fieldset class="filter-group filter--special">
             <legend class="filter-legend">Стоимость, ₽:</legend>
+            <div class="range-values-container">
+              <div class="range-values-block">
+                <input id="min-value" type="text" class="range-input range-input--min" name="min-value" value="0">
+                <label for="min-value" class="range-label">  от</label>
+              </div>
+              <div class="range-values-block">
+                <input id="max-value" type="text" class="range-input range-input--max" name="max-value" value="9000">
+                <label for="max-value" class="range-label">до</label>
+              </div>
+            </div>
+            <div class="range-container">
+              <div class="range-scale"></div>
+              <div class="range"></div>
+              <button class="range-handle range-handle--min" type="button">
+                <span class="visually-hidden">Установить минимальное значение диапазона цены</span>
+              </button>
+              <button class="range-handle range-handle--max" type="button">
+                <span class="visually-hidden">Установить максимальное значение диапазона цены</span>
+              </button>
+            </div>
           </fieldset>
-          <fieldset class="filter-group">
+          <fieldset class="filter-group filter--special-group">
             <button class="filter-button" type="submit">Применить</button>
             <button class="filter-button--special" type="reset">Сбросить</button>
           </fieldset>
