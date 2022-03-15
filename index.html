@@ -136,9 +136,12 @@
       </section>
       <section class="footer-contakts">
         <div class="social-networks">
-          <a class="social-twit" href="https://twitter.com/htmlacademy_ru"><span class="visually-hidden">Твитер</span></a>
-          <a class="social-face" href="https://www.facebook.com/htmlacademy"><span class="visually-hidden">Фейсбук</span></a>
-          <a class="social-yout" href="https://www.youtube.com/c/HTMLAcademyRUS"><span class="visually-hidden">Ютюб</span></a>
+          <a class="social-twit" href="https://twitter.com/htmlacademy_ru"><span
+              class="visually-hidden">Твитер</span></a>
+          <a class="social-face" href="https://www.facebook.com/htmlacademy"><span
+              class="visually-hidden">Фейсбук</span></a>
+          <a class="social-yout" href="https://www.youtube.com/c/HTMLAcademyRUS"><span
+              class="visually-hidden">Ютюб</span></a>
         </div>
         <a class="contact-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
         <a class="academy-logo" href="https://htmlacademy.ru/">
@@ -146,6 +149,44 @@
         </a>
       </section>
     </footer>
+    <section class="modal-window">
+      <button type="button" class="close-button"></button>
+      <form class="modal-form">
+        <div class="visuai-frame">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+        </div>
+        <div class="modal-form-row">
+          <label for="date-chekin" class="modal-label">Дата заезда:</label>
+          <div class="input-container">
+            <input id="date-checkin" type="text" class="modal-input" value="27 апреля 2020">
+            <p class="modal-error">Мы не можем отправить вас в прошлое.</p>
+          </div>
+        </div>
+        <div class="modal-form-row">
+          <label for="date-checkout" class="modal-label">Дата выезда:</label>
+          <div class="input-container">
+            <input id="date-checkout" type="text" class="modal-input" value="1 сентября 2021">
+            <p class="modal-message">На эти даты есть свободные номера. Пока есть.</p>
+          </div>
+        </div>
+        <div class="modal-form-row">
+          <div class="short-container">
+            <label for="groun" class="modal-label">Взрослые:</label>
+            <input id="groun" type="text" class="modal-input--short" value="2">
+          </div>
+          <div class="short-container short-container--child">
+            <label for="child" class="modal-label">Дети:</label>
+            <div class="info-container">
+              <a href="" class="info-link">i</a>
+              <div class="info-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет.
+                Дети до 6 лет размещаются бесплатно.</div>
+            </div>
+            <input id="child" type="text" class="modal-input--short" value="1">
+          </div>
+        </div>
+        <button type="submit" class="modal-button">Найти</button>
+      </form>
+    </section>
   </div>
 </body>
 
