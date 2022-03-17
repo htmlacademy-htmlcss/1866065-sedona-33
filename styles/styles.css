@@ -213,6 +213,11 @@ body {
 	width: 100%;
 }
 
+.about-special-color {
+	background-color: #ffffff;
+}
+
+
 .about-item-container {
 	display: flex;
 	min-height: 384px;
@@ -289,7 +294,10 @@ body {
 	min-height: 384px;
 	width: 400px;
 	position: relative;
-	
+}
+
+.benefits-burger--special {
+	background-color: #ffffff;
 }
 
 .benefits-item--home::before {
@@ -303,7 +311,7 @@ body {
 	height: 72px;
 }  
 
-.benefits-icon-burger::before {
+.benefits-burger--special::before {
 	content: "";
 	background: url("../images/svg/burger-icon.svg") no-repeat center;
   display: block;
@@ -676,8 +684,7 @@ body {
 .filter-container {
 	display: grid;
 	grid-template-columns: 220px 220px 459px 217px;
-	/* justify-content: space-around; */
-	padding-top: 46px;
+	padding-top: 40px;
 	padding-left: 54px;
 }
 
@@ -688,7 +695,7 @@ body {
 }
 
 .filter--special{
-	padding-left: 108px;
+	padding-left: 107px;
 
 }
 
@@ -707,7 +714,7 @@ body {
 .filter-list {
 	margin: 0;
 	list-style: none;
-	padding: 16px 0 0 0px;
+	padding: 23px 0 0 0px;
 }
 
 .filter-list--type {
@@ -820,6 +827,7 @@ body {
 	width: 50%;
 	height: 100%;
 	position: relative;
+	padding-top: 2px;
 }
 
 .range-input {
@@ -910,6 +918,7 @@ body {
 }
 
 .green-button {
+	font-family: 'PT Sans';
 	background-color: #7DB54F;
 	border-radius: 4px;
   width: 141px;
@@ -982,11 +991,14 @@ hotel-item--select {
 }
 
 .select-choise {
-  width: 287px;
-  height: 46px;
-  margin-left: 192px;
-  padding-top: 20px;
-  margin-top: 26px;
+	width: 287px;
+	height: 46px;
+	margin-left: 192px;
+	padding-top: 20px;
+	margin-top: 26px;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 23px;
 }
 
 .mode-list {
@@ -1091,6 +1103,7 @@ hotel-item--select {
     line-height: 18px;
     color: #333333;
     width: 227px;
+		font-family: 'PT Sans';
 }
 
 .hotel-card-button {
@@ -1110,6 +1123,7 @@ hotel-item--select {
 }
 
 .blue-button {
+	font-family: 'PT Sans';
 	background: #83B3D3;
 	border-radius: 4px;
 	width: 141px;
@@ -1119,7 +1133,6 @@ hotel-item--select {
 	color: #ffffff;
 	padding: 9px 0px 10px 0px;
 	cursor: pointer;
-
 }
 
 .hotel-card-rating {
@@ -1155,13 +1168,16 @@ hotel-item--select {
 .stars::after {
 	content: ""; 
 	background: url("../images/svg/star.svg") space 0 0;
-	width: 43px;
 	height: 100%;
 	display: block;
 }
 
-.stars--1 {
-	width: 25px;
+.stars-four {
+	width: 89px;
+}
+
+.stars-three {
+	padding-left: 0;
 }
 
 /*кнопка "Загрузить ЕЩЕ"*/
@@ -1178,6 +1194,7 @@ hotel-item--select {
 
 }
 .download-options {
+		font-family: 'PT Sans';
     font-weight: bold;
     font-size: 20px;
     line-height: 25px;
@@ -1259,6 +1276,7 @@ hotel-item--select {
 	transform: translate(-50% -50%);
 	padding: 63px 70px 20px 70px ;
 	box-sizing: border-box;
+	display: none;
 }
 
 .modal-title {
@@ -1294,18 +1312,57 @@ hotel-item--select {
 	box-sizing: border-box;
 }
 
-.modal-input--short {
-	font-family: "PT Sans", "Arial", sans-serif;
+.modal-input--container {
 	width: 133px;
 	height: 50px;
+	display: flex;
+}
+
+.modal-input--short {
+	font-family: "PT Sans", "Arial", sans-serif;
+	width: 44px;
 	font-weight: 700;
 	font-size: 18px;
 	line-height: 40px;
 	background: #F2F2F2;
-	border-radius: 4px;
 	border: none;
 	box-sizing: border-box;
-	padding-left: 60px;
+	padding-left: 17px;
+	display: block;
+}
+
+.modal-input-button {
+	display: block;
+	width: 44px;
+	border-style: none;
+	background: #F2F2F2;
+	position: relative;
+}
+
+.modal-input-button.minus::before {
+	content: "";
+	width: 1px;
+	height: 13px;
+	background: #000000;
+	opacity: 0.3;
+	transform: rotate(-90deg);
+	display: block;
+	position: absolute;
+	left: 22px;
+	top: 19px;
+}
+
+.modal-input-button.plus::before {
+	content: "";
+	width: 13px;
+	height: 13px;
+	background: #000000;
+	opacity: 0.3;
+	transform: rotate(-90deg);
+	display: block;
+	position: absolute;
+	left: 22px;
+	top: 19px;
 }
 
 .modal-error {
@@ -1422,11 +1479,8 @@ hotel-item--select {
 	display: block;
 }
 
-.info-container {}
-
 .input-container {
  	width: 420px;
-
 }
 
 .modal-form-row {
@@ -1449,3 +1503,4 @@ hotel-item--select {
 .short-container--child .modal-label {
 	width: 50px;
 }
+
