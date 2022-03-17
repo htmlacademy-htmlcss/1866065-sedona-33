@@ -161,7 +161,7 @@
             <button class="button  blue-button" type="submit">В Избранное</button>
           </div>
           <div class="hotel-card-rating">
-            <p class="stars"></p>
+            <p class="stars stars-four"></p>
             <p class="rating">Рейтинг: 8,5</p>
           </div>
         </li>
@@ -177,7 +177,7 @@
           <button class="button  blue-button" type="submit">В Избранное</button>
           </div>
           <div class="hotel-card-rating">
-            <p class="stars"></p>
+            <p class="stars stars-three"></p>
             <p class="rating">Рейтинг: 8,9</p>
           </div>
         </li>
@@ -214,7 +214,11 @@
           </div>
         </li>
       </ul>
-      <button class="download-options" type="button">Загрузить ещё</button>
+      <fieldset class="button-compartment">
+        <button class="download-options" type="button">Загрузить ещё
+        </button>
+      </fieldset>
+      <section class="pagination-section">
       <ul class="pagination-list">
         <li class="pagination-item">
           <a class="pagination-link pagination-disabled">1
@@ -237,18 +241,19 @@
           </a>
         </li>
         <li class="pagination-item">
-          <a class="pagination-link">5
+          <a class="pagination-link">10
           </a>
         </li>
       </ul>
       <p class="hotel-card-paragraph">Гостиниц на странице:</p>
       <select class="select-control number-per-page" aria-label="Количество-найденных-отелей">
-        <option Class="hotel-card-paragraph" value="four">4</option>
+        <option class="hotel-card-paragraph" value="four">4</option>
       </select>
+    </section>
     </section>
   </main>
   <footer class="page-footer">
-    <section class="subscription">
+    <section class="subscription sabscription--background">
       <h3 class="subscription-title">Подпишитесь на рассылку</h3>
       <p class="sabscription-text">
         Только полезная информация и никакого спама, честное бойскаутское!
@@ -274,4 +279,6 @@
       </a>
     </section>
   </footer>
+  <script src="./javascript/script.js"></script>
 </body>
+</html>
