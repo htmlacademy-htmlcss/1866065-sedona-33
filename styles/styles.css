@@ -111,12 +111,13 @@ body {
 	line-height: 26px;
 	text-decoration: none;
 	color: black;
-	display:block;
+	display: block;
+	height: 26px;
 }
 
 .navigation-link--active {
 	padding-bottom: 20px;
-	border-bottom: 2px solid red;
+	border-bottom: 2px solid #756257;
 }
 
 .navigation-link--searh::after {
@@ -584,7 +585,7 @@ body {
 	color: #FFFFFF;
 	width: 1200px;
 	min-height: 408px;
-	margin-top: 15px;
+	margin: 0;
 }
 
 .inner-title {
@@ -1118,6 +1119,15 @@ hotel-item--select {
 	padding-top: 2px;
 }
 
+.search-result-number {
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 18px;
+	color: #333333;
+	width: 228px;
+	font-family: 'PT Sans';
+}
+
 .hotel-card-button {
   display: flex;
   justify-content: space-between;
@@ -1150,6 +1160,7 @@ hotel-item--select {
 .hotel-card-rating {
 	display: flex;
 	margin: 16px 0 11px 0;
+	justify-content: space-between;
 }
 
 .rating {
@@ -1184,23 +1195,27 @@ hotel-item--select {
 	display: block;
 }
 
-.stars-four {
-	width: 89px;
+.four-stars {
+  width: 29%;
 }
 
-.stars-three {
-	padding-left: 0;
+.three-stars{
+  width: 23%;
+}
+
+.two-stars {
+	width: 15%;
 }
 
 /*кнопка "Загрузить ЕЩЕ"*/
 .button-compartment {
-    width: 1055px;
-    height: 120px;
-    padding: 0;
-    position: relative;
-    border: 1px solid #E6E6E6;
-    margin-top: 24px;
-    left: 71px;
+	width: 1055px;
+	height: 120px;
+	padding: 0;
+	position: relative;
+	border: 1px solid #E6E6E6;
+	margin-top: 22px;
+	left: 71px;
 	border-left: 0;
 	border-right: 0;
 
@@ -1225,17 +1240,20 @@ hotel-item--select {
 
 /*Пагинация*/
 .pagination-section {
-    display: flex;
-    width: 1056px;
-	margin: 30px 72px 0 72px;
+	margin: 0 auto;
+	display: flex;
+	width: 1056px;
+	/* margin: 30px 72px 0 72px; */
+	padding-top: 27px;
 }
 
 .pagination-list {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    width: 670px;
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 670px;
+	padding-top: 1px;
 }
 
 .pagination-item {
@@ -1251,6 +1269,7 @@ hotel-item--select {
 
 
 .pagination-link {
+	font-family: 'PT Sans';
 	font-weight: 700;
 	font-size: 20px;
 	line-height: 26px; 
