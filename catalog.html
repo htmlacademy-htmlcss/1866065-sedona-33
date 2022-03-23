@@ -5,24 +5,27 @@
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
 </head>
 
 <body>
   <div class="page">
     <header class="page-header">
-      <a class="logo-link">
+      <a class="logo-link" href="index.html">
         <img class="logo-img" src="./images/svg/logo.svg" alt="Логотип сайта города Седоны" width="139" height="70" />
       </a>
       <nav class="navigation">
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a class="navigation-link navigation-link--active" href="#">Главная</a>
+            <a class="navigation-link" href="#">Главная</a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">О Cедоне</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="catalog.html">Гостиницы</a>
+            <a class="navigation-link navigation-link--active">Гостиницы</a>
           </li>
         </ul>
         <ul class="navigation-user">
@@ -107,18 +110,16 @@
             <fieldset class="filter-group filter--special">
               <legend class="filter-legend">Стоимость, ₽:</legend>
               <div class="range-values-container">
-                <div class="range-values-block">
                   <input id="min-value" type="text" class="range-input range-input--min" name="min-value" value="0">
-                  <label for="min-value" class="range-label"> от</label>
-                </div>
-                <div class="range-values-block">
+                  <label for="min-value" class="range-label">от</label>
                   <input id="max-value" type="text" class="range-input range-input--max" name="max-value" value="9000">
                   <label for="max-value" class="range-label">до</label>
-                </div>
+                
               </div>
               <div class="range-container">
                 <div class="range-scale"></div>
                 <div class="range"></div>
+                <!--class for active button ::: .range-handle--active -->
                 <button class="range-handle range-handle--min" type="button">
                   <span class="visually-hidden">Установить минимальное значение диапазона цены</span>
                 </button>
@@ -167,7 +168,9 @@
       <section class="hotel-cadr">
         <ul class="hotel-card-list">
           <li class="hotel-card-item">
-            <img class="hotel-card-image" src="./images/hotel-1.jpg" alt="Амара ресорт" width="300" height="206">
+            <a class="hotel-card-image-link" href="#">
+              <img class="hotel-card-image" src="./images/hotel-1.jpg" alt="Амара ресорт" width="300" height="206">
+            </a>
             <h3 class="hotel-card-title">Amara Resort & Spa</h3>
             <div class="hotel-card-description">
               <p class="hotel-card-paragraph">Гостиница</p>
@@ -183,7 +186,9 @@
             </div>
           </li>
           <li class="hotel-card-item">
-            <img class="hotel-card-image" src="./images/hotel-2.jpg" alt="Десерт Квэйл Инн" width="300" height="206">
+            <a class="hotel-card-image-link" href="#">
+              <img class="hotel-card-image" src="./images/hotel-2.jpg" alt="Десерт Квэйл Инн" width="300" height="206">
+            </a>
             <h3 class="hotel-card-title">Desert Quail Inn</h3>
             <div class="hotel-card-description">
               <p class="hotel-card-paragraph">Гостиница</p>
@@ -199,8 +204,9 @@
             </div>
           </li>
           <li class="hotel-card-item">
-            <img class="hotel-card-image" src="./images/hotel-3.jpg" alt="Вилас ат Поко Диабло" width="300"
-              height="206">
+            <a class="hotel-card-image-link" href="#">
+              <img class="hotel-card-image" src="./images/hotel-3.jpg" alt="Вилас ат Поко Диабло" width="300" height="206">
+            </a>
             <h3 class="hotel-card-title">Villas at Poco Diablo</h3>
             <div class="hotel-card-description">
               <p class="hotel-card-paragraph">Гостиница</p>
@@ -216,7 +222,9 @@
             </div>
           </li>
           <li class="hotel-card-item">
-            <img class="hotel-card-image" src="./images/hotel-4.jpg" alt="Амара ресорт" width="300" height="206">
+            <a class="hotel-card-image-link" href="#">
+              <img class="hotel-card-image" src="./images/hotel-4.jpg" alt="Амара ресорт" width="300" height="206">
+            </a>
             <h3 class="hotel-card-title">GreenTree Inn</h3>
             <div class="hotel-card-description">
               <p class="hotel-card-paragraph">Гостиница</p>
@@ -232,35 +240,34 @@
             </div>
           </li>
         </ul>
-        <fieldset class="button-compartment">
-          <button class="download-options" type="button">Загрузить ещё
-          </button>
+        <fieldset class="link-compartment">
+          <a class="download-options" href="#">Загрузить ещё</a>
         </fieldset>
         <section class="pagination-section">
           <h2 class="visually-hidden">Переключение страниц с результатами поиска</h2>
           <ul class="pagination-list">
-            <li class="pagination-item">
-              <a class="pagination-link pagination-disabled">1
+            <li class="pagination-active">
+              <a href="#" class="pagination-link-disabled">1
               </a>
             </li>
             <li class="pagination-item">
-              <a class="pagination-link">2
+              <a href="#" class="pagination-link">2
               </a>
             </li>
             <li class="pagination-item">
-              <a class="pagination-link">3
+              <a href="#" class="pagination-link">3
               </a>
             </li>
             <li class="pagination-item">
-              <a class="pagination-link">4
+              <a href="#" class="pagination-link">4
               </a>
             </li>
             <li class="pagination-item">
-              <a class="pagination-link">...
+              <a  href="#" class="pagination-link">...
               </a>
             </li>
             <li class="pagination-item">
-              <a class="pagination-link">10
+              <a href="#"class="pagination-link">10
               </a>
             </li>
           </ul>
@@ -271,7 +278,7 @@
         </section>
       </section>
     </main>
-    <footer class="page-footer">
+    <footer class="page-footer page-footer--inner">
       <section class="subscription">
         <h3 class="subscription-title">Подпишитесь на рассылку</h3>
         <p class="sabscription-text">
