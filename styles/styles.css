@@ -82,7 +82,8 @@ body {
   list-style: none;
   display: grid;
   grid-template-columns: repeat(4, auto);
-  gap: 35px;
+  grid-row-gap: 12px;
+  grid-column-gap: 35px;
   max-width: 552px;
 }
 
@@ -137,6 +138,7 @@ body {
   text-decoration: none;
   color: #000000;
   display: block;
+  padding-bottom: 17px;
 }
 
 .navigation-link:hover {
@@ -235,7 +237,7 @@ body {
   width: 1200px;
   padding-bottom: 81px;
   position: relative;
-  background-color: #17405c;
+  background-color: #2e4e62;
 }
 
 .welcome::after {
@@ -363,11 +365,11 @@ body {
 .about-description {
   font-size: 18px;
   line-height: 21px;
-  margin: 0;
+  margin: 0 auto;
   text-align: center;
   padding-top: 28px;
-  width: 220px;
-  padding-left: 85px;
+  width: 231px;
+  padding-left: 0;
   padding-bottom: 2px;
 }
 
@@ -518,9 +520,10 @@ body {
   background-image: url("../images/background-bloor.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
-  background-color: #000000;
+  background-color: #456b83;
   color: #ffffff;
   padding-bottom: 95px;
+  background-size: cover;
 }
 
 .page-footer--inner .subscription {
@@ -754,11 +757,12 @@ body {
 .catalog-hotels {
   background-image: url("../images/catalog-background.jpg");
   background-position: left top;
-  background-color: #000000;
+  background-color: #6688ae;
   color: #ffffff;
   width: 1200px;
   min-height: 408px;
   margin: 0;
+  background-size: cover;
 }
 
 .inner-title {
@@ -1420,10 +1424,9 @@ body {
   background: #756257;
   border-radius: 4px;
   width: 133px;
-  height: 37px;
   text-decoration: none;
   color: #ffffff;
-  padding: 9px 0 10px 0;
+  padding: 9px 0 7px 0;
   box-sizing: border-box;
 }
 
@@ -1447,11 +1450,10 @@ body {
   font-family: "PT Sans", "Arial", sans-serif;
   border-radius: 4px;
   width: 141px;
-  height: 37px;
   border: none;
   outline: none;
   color: #ffffff;
-  padding: 9px 0 10px 0;
+  padding: 9px 0 7px 0;
   cursor: pointer;
   background-color: #83b3d3;
 }
@@ -1509,6 +1511,10 @@ body {
   display: block;
 }
 
+.five-stars {
+  width: 120px;
+}
+
 .four-stars {
   width: 29%;
 }
@@ -1519,6 +1525,10 @@ body {
 
 .two-stars {
   width: 15%;
+}
+
+.one-stars {
+  width: 34px;
 }
 
 /*ссылка "Загрузить ЕЩЕ"*/
@@ -1640,6 +1650,22 @@ body {
   cursor: pointer;
 }
 
+.modal-window-container{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(240, 240, 240, 0.9);
+  z-index: 10;
+  display: none;
+}
+
+.modal-window-container--show{
+  display: block;
+}
+
 .modal-window {
   width: 715px;
   height: 561px;
@@ -1649,10 +1675,9 @@ body {
   background: #ffffff;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
   border-radius: 30px;
-  transform: translate(-50% -50%);
-  padding: 63px 70px 20px 70px;
+  transform: translate(-50%, -50%);
+  padding: 61px 70px 20px 68px;
   box-sizing: border-box;
-  display: none;
 }
 
 .modal-title {
@@ -1667,25 +1692,36 @@ body {
 .modal-label {
   font-weight: 700;
   font-size: 18px;
-  line-height: 40px;
+  line-height: 24px;
   margin: 0;
   width: 143px;
   display: inline-block;
+  padding-top: 13px;
 }
 
 .modal-input {
   font-weight: 700;
-  font-size: 1px;
+  font-size: 18px;
   line-height: 40px;
   font-family: "PT Sans", "Arial", sans-serif;
-  background: #f2f2f2;
+  background: #f2f2f2 url("../images/svg/calendar.svg") no-repeat 385px 18px;
   border-radius: 4px;
   width: 420px;
   height: 50px;
   border: none;
-  padding-left: 23px;
+  padding: 0 54px 0 18px;
   margin: 0;
   box-sizing: border-box;
+  display: block;
+}
+
+.modal-input:hover {
+  background-color: #e6e6e6;
+}
+
+.modal-input:focus {
+  background-color: #e6e6e6;
+  outline: 3px solid #83B3D3;
 }
 
 .modal-input--container {
@@ -1705,6 +1741,17 @@ body {
   box-sizing: border-box;
   padding-left: 17px;
   display: block;
+  position: relative;
+  z-index: 10;
+}
+
+.modal-input--short:hover {
+  background-color: #e6e6e6;
+}
+
+.modal-input--short:focus {
+  background-color: #e6e6e6;
+  outline: 3px solid #83B3D3;
 }
 
 .modal-input-button {
@@ -1713,41 +1760,60 @@ body {
   border-style: none;
   background: #f2f2f2;
   position: relative;
+  cursor: pointer;
 }
 
 .modal-input-button.minus::before {
   content: "";
-  width: 1px;
-  height: 13px;
-  background: #000000;
+  width: 25px;
+  height: 25px;
+  background: url("../images/svg/minus.svg") no-repeat center center;
   opacity: 0.3;
-  transform: rotate(-90deg);
   display: block;
   position: absolute;
-  left: 22px;
-  top: 19px;
+  left: 15px;
+  top: 14px;
 }
 
 .modal-input-button.plus::before {
   content: "";
-  width: 13px;
-  height: 13px;
-  background: #000000;
+  width: 25px;
+  height: 25px;
+  background: url("../images/svg/plus.svg") no-repeat center center;
   opacity: 0.3;
-  transform: rotate(-90deg);
   display: block;
   position: absolute;
-  left: 22px;
-  top: 19px;
+  left: 7px;
+  top: 15px;
+}
+
+.modal-input-button.minus:hover::before,
+.modal-input-button.plus:hover::before{
+  opacity: 1;
+}
+
+.modal-input-button.minus:focus::before,
+.modal-input-button.plus:focus::before{
+  outline: 3px solid #83B3D3;
+  opacity: 1;
+}
+
+.modal-input-button.minus:focus,
+.modal-input-button.plus:focus{
+  outline: none;
+}
+
+.modal-input-button.minus:active::before,
+.modal-input-button.plus:active::before{
+  opacity: 0.2;
 }
 
 .modal-error {
   font-weight: 400;
   font-size: 16px;
   color: #ff0000;
-  margin: 0;
+  margin: 2px 0 0;
   line-height: 24px;
-  margin-bottom: 16px;
 }
 
 .modal-message {
@@ -1771,7 +1837,17 @@ body {
   border: none;
   position: absolute;
   left: 592px;
-  top: 48px;
+  top: 54px;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  background: #e6e6e6;
+}
+
+.close-button:focus {
+  background: #e6e6e6;
+  outline: 3px solid #83b3d3;
 }
 
 .close-button::after {
@@ -1785,6 +1861,11 @@ body {
   position: absolute;
 }
 
+.close-button:active::after{
+  opacity: 0.3;
+  outline: none;
+}
+
 .modal-button {
   width: 575px;
   height: 60px;
@@ -1796,8 +1877,23 @@ body {
   font-size: 20px;
   line-height: 40px;
   text-transform: uppercase;
-  margin-top: 39px;
+  margin-top: 27px;
   padding-left: 9px;
+}
+
+.modal-button:hover {
+  background: #68a2ca;
+}
+
+.modal-button:focus {
+  background: #68a2ca;
+  outline: 3px solid #756257;
+}
+
+.modal-button:active {
+  background: #68a2ca;
+  outline: none;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .info-container {
@@ -1816,14 +1912,14 @@ body {
   text-decoration: none;
   justify-content: center;
   align-items: center;
-  margin-left: -15px;
-  margin-top: 10px;
+  margin-left: -17px;
+  margin-top: 15px;
 }
 
 .info-text {
   width: 256px;
-  left: -129px;
-  top: 50px;
+  left: -133px;
+  top: 55px;
   background: #333333;
   box-shadow: 0 15px 30px rgb(0 0 0 / 30%);
   border-radius: 10px;
@@ -1861,6 +1957,12 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 14px;
+}
+
+.modal-form-row--count{
+  margin-top: -14px;
 }
 
 .short-container {
