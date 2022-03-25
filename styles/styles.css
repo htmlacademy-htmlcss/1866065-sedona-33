@@ -1659,7 +1659,6 @@ body {
   height: 100%;
   background-color: rgba(240, 240, 240, 0.9);
   z-index: 10;
-  display: none;
 }
 
 .modal-window-container--show{
